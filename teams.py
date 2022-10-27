@@ -2,6 +2,7 @@ import json
 import requests
 from datetime import datetime
 import re
+import pandas as pd
 
 '''
 Returns a list of active team ids.
@@ -39,3 +40,10 @@ def get_team_data():
             team_data[k.lower() + '_r'] = int(re.sub('\D', '', v))
         team_data_all.append(team_data)
     return(team_data_all)
+
+'''
+Writes the teams data to a csv. This file will be used by the front end to develop views.
+'''
+def write_team_data():
+    df = pd.DataFrame(get_team_data())
+    df.to_csv('static/data/teams_data.csv', encoding='utf-8', index=False)
