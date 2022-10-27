@@ -1,5 +1,6 @@
 import json
 import requests
+import pandas as pd
 
 '''
 Calls the api and formats a list of dictionaries containing the game schedule.
@@ -20,3 +21,9 @@ def get_game_schedule():
             games_data_all.append(game_data)
     return(games_data_all)
 
+'''
+Takes in player data and writes the data to a csv file. One for skater and another for goalies (they have different features which dictates we need two seperate files.)
+'''
+def write_game_schedule():
+    df = pd.DataFrame(get_game_schedule())
+    df.to_csv('static/data/schedule_data.csv', encoding='utf-8', index=False)
