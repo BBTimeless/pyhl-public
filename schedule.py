@@ -22,7 +22,7 @@ def get_game_schedule():
     return(games_data_all)
 
 '''
-Takes in player data and writes the data to a csv file. One for skater and another for goalies (they have different features which dictates we need two seperate files.)
+Writes the schedule data to a csv. This file will be used by the front end to develop views.
 '''
 def write_game_schedule():
     df = pd.DataFrame(get_game_schedule())
