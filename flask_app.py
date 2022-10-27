@@ -10,7 +10,7 @@ app.config["CACHE_TYPE"] = 'simple'
 cache.init_app(app)
 
 '''
-Renders the index template and passes in the launch information.
+Renders the index template.
 '''
 @app.route('/')
 def index():
@@ -19,5 +19,5 @@ def index():
 @cache.cached(timeout=260, key_prefix='function')
 def function():
     '''Caches the data that is updated every ~5 minutes.'''
-    data = 
+    data = 5
     return data
