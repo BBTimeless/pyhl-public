@@ -1,6 +1,7 @@
 import json
 import requests
-from teams import get_team_ids 
+from teams import get_team_ids
+from datetime import datetime
 
 '''
 Calls the nhl team api and returns a list of all active player ids.
@@ -114,3 +115,11 @@ def get_player_stats():
                 record['timeonicepergame'] = None
             player_stats_skaters.append(record)
     return(player_stats_skaters, player_stats_goalies)
+
+'''
+Takes in player data and writes the data to a csv file. One for skater and another for goalies (they have different features which dictates we need two seperate files.)
+'''
+def write_player_data():
+    data_all = get_player_stats()
+    skater_data = data_all[0]
+    goalie_data = data_all[1]
