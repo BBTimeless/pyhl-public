@@ -1,5 +1,7 @@
 from flask import Flask, render_template
 from flask_caching import Cache
+import pandas as pd
+from skaters import get_skater_data, get_skater_features
 
 app = Flask(__name__)
 cache = Cache()
@@ -14,7 +16,9 @@ Renders the index template.
 '''
 @app.route('/')
 def index():
-    return render_template("index.html")
+    return render_template("index.html",
+                            skater_data = get_skater_data(),
+                            skater_features = get_skater_features())
 
 @cache.cached(timeout=260, key_prefix='function')
 def function():

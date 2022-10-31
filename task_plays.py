@@ -1,6 +1,7 @@
 import json
 import requests
 
+# TODO: Write function to write to CSV.
 '''
 A helper function to notify get_game_plays when it should check for player ids.
 

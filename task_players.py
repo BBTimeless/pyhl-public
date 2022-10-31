@@ -1,6 +1,6 @@
 import json
 import requests
-from teams import get_team_ids
+from task_teams import get_team_ids
 from datetime import datetime
 import pandas as pd
 
@@ -124,5 +124,5 @@ def write_player_data():
     data_all = get_player_stats()
     skater_df = pd.DataFrame(data_all[0])
     goalie_df = pd.DataFrame(data_all[1])
-    skater_df.to_csv('static/data/skater_data.csv', encoding='utf-8', index=False)
-    goalie_df.to_csv('static/data/goalie_data.csv', encoding='utf-8', index=False)
+    skater_df.to_csv('static/data/data_skater.csv', encoding='utf-8', index=False)
+    goalie_df.to_csv('static/data/data_goalie.csv', encoding='utf-8', index=False)

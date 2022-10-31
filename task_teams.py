@@ -46,4 +46,4 @@ Writes the teams data to a csv. This file will be used by the front end to devel
 '''
 def write_team_data():
     df = pd.DataFrame(get_team_data())
-    df.to_csv('static/data/teams_data.csv', encoding='utf-8', index=False)
+    df.to_csv('static/data/data_teams.csv', encoding='utf-8', index=False)
