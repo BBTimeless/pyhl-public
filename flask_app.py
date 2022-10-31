@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 from flask_caching import Cache
 import pandas as pd
-from skaters import get_skater_data, get_skater_features
+from skaters import get_skater_data
 
 app = Flask(__name__)
 cache = Cache()
@@ -18,7 +18,7 @@ Renders the index template.
 def index():
     DATA = get_skater_data()
     return render_template("index.html",
-                            tables=[DATA.to_html(classes='data', header="true")],
+                            tables=[DATA.to_html(classes='data', header="true", table_id="skater_table")],
                             titles=DATA.columns.values)
 
 @cache.cached(timeout=260, key_prefix='function')
