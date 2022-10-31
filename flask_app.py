@@ -16,9 +16,10 @@ Renders the index template.
 '''
 @app.route('/')
 def index():
+    DATA = get_skater_data()
     return render_template("index.html",
-                            skater_data = get_skater_data(),
-                            skater_features = get_skater_features())
+                            tables=[DATA.to_html(classes='data', header="true")],
+                            titles=DATA.columns.values)
 
 @cache.cached(timeout=260, key_prefix='function')
 def function():
