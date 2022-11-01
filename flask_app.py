@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_caching import Cache
 import pandas as pd
-from skaters import get_skater_data_by_id, get_skater_data_by_team_id
+from skaters import get_skater_data_by_id, get_skater_data_by_team_id, get_top_skaters
 from teams import get_team_data_all
 
 app = Flask(__name__)
@@ -21,16 +21,17 @@ def index():
     return render_template("index.html",
                             teams = TEAMS_DATA)
 
-@app.route('/skater/', methods=('GET', 'POST'))
+@app.route('/results/', methods=('GET', 'POST'))
 def skater():
     if request.method == 'POST':
         form_data = request.form.getlist('team')
         ids = [eval(i) for i in form_data]
-        print(ids)
         SKATER_DATA = get_skater_data_by_team_id(ids)
-        return render_template('skater_result.html',
-                                tables=[SKATER_DATA.to_html(classes='data', header="true", table_id="skater_table")],
-                                titles=SKATER_DATA.columns.values)
+        return render_template('results.html',
+                                skater_tables=[SKATER_DATA.to_html(classes='data', header="true", table_id="skater_table")],
+                                skater_titles=[SKATER_DATA.columns.values]
+        )
+                                
     else:
         return redirect(url_for('index'))
 

@@ -12,6 +12,7 @@
 <body>
 
     <form action="{{ url_for('skater') }}" method="post">
+        <input type="checkbox" onClick="toggle(this)" /> Toggle All<br/><br/>
         {% for index,team in teams.iterrows() %}
             <input type="checkbox" id="{{team['id']}}" name="team" value="{{team['id']}}">
             <label for="vehicle1"> {{team['name']}}</label><br>
@@ -21,6 +22,13 @@
         <input type="submit" value="Go!">
     </form>
 
-
+    <script language="JavaScript">
+        function toggle(source) {
+            checkboxes = document.getElementsByName('team');
+            for(var i=0, n=checkboxes.length;i<n;i++) {
+            checkboxes[i].checked = source.checked;
+            }
+        }
+    </script>
 </body>
 </html>

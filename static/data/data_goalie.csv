@@ -1,73 +1,74 @@
-id,currentteamid,fullname,currentteam,primaryposition,lastupdated,wins,losses,ties,shutouts,savepercentage,goalagainstaverage
-8473541,1,Jonathan Bernier,New Jersey Devils,Goalie,"11/01/2022, 14:09:16",0,0,0,0,0.0,0.0
-8477970,1,Vitek Vanecek,New Jersey Devils,Goalie,"11/01/2022, 14:09:17",3,1,0,1,0.903226,2.076923
-8478406,1,Mackenzie Blackwood,New Jersey Devils,Goalie,"11/01/2022, 14:09:17",3,2,0,0,0.871287,2.811655
-8473575,2,Semyon Varlamov,New York Islanders,Goalie,"11/01/2022, 14:09:20",2,1,0,0,0.907216,3.025493
-8478009,2,Ilya Sorokin,New York Islanders,Goalie,"11/01/2022, 14:09:22",3,3,0,1,0.933333,2.212243
-8470860,3,Jaroslav Halak,New York Rangers,Goalie,"11/01/2022, 14:09:23",0,3,0,0,0.86747,3.692652
-8478048,3,Igor Shesterkin,New York Rangers,Goalie,"11/01/2022, 14:09:25",5,0,0,0,0.913462,2.55289
-8478433,4,Felix Sandstrom,Philadelphia Flyers,Goalie,"11/01/2022, 14:09:29",0,2,0,0,0.9,3.141361
-8479394,4,Carter Hart,Philadelphia Flyers,Goalie,"11/01/2022, 14:09:29",5,0,0,0,0.938053,2.307059
-8477465,5,Tristan Jarry,Pittsburgh Penguins,Goalie,"11/01/2022, 14:09:33",4,2,0,0,0.914692,3.02112
-8479193,5,Casey DeSmith,Pittsburgh Penguins,Goalie,"11/01/2022, 14:09:33",0,2,0,0,0.913462,2.97275
-8476999,6,Linus Ullmark,Boston Bruins,Goalie,"11/01/2022, 14:09:36",6,0,0,1,0.945274,1.698842
-8480280,6,Jeremy Swayman,Boston Bruins,Goalie,"11/01/2022, 14:09:38",2,1,0,0,0.871795,3.757829
-8467950,7,Craig Anderson,Buffalo Sabres,Goalie,"11/01/2022, 14:09:38",3,0,0,0,0.945652,1.662203
-8477480,7,Eric Comrie,Buffalo Sabres,Goalie,"11/01/2022, 14:09:39",3,3,0,0,0.901961,3.343084
-8474596,8,Jake Allen,Montréal Canadiens,Goalie,"11/01/2022, 14:09:42",3,3,0,0,0.909091,2.854078
-8478470,8,Sam Montembeault,Montréal Canadiens,Goalie,"11/01/2022, 14:09:44",2,1,0,0,0.931373,2.319161
-8475660,9,Cam Talbot,Ottawa Senators,Goalie,"11/01/2022, 14:09:46",0,0,0,0,0.0,0.0
-8476341,9,Anton Forsberg,Ottawa Senators,Goalie,"11/01/2022, 14:09:47",3,4,0,0,0.913223,3.043601
-8476433,9,Magnus Hellberg,Ottawa Senators,Goalie,"11/01/2022, 14:09:47",1,0,0,0,0.935484,2.0
-8476899,10,Matt Murray,Toronto Maple Leafs,Goalie,"11/01/2022, 14:09:50",0,1,0,0,0.826087,4.047218
-8478492,10,Ilya Samsonov,Toronto Maple Leafs,Goalie,"11/01/2022, 14:09:53",4,2,0,0,0.92,2.350308
-8478902,10,Erik Kallgren,Toronto Maple Leafs,Goalie,"11/01/2022, 14:09:53",0,1,0,0,0.875,3.620406
-8475883,12,Frederik Andersen,Carolina Hurricanes,Goalie,"11/01/2022, 14:09:55",4,2,0,0,0.896104,2.641959
-8477293,12,Antti Raanta,Carolina Hurricanes,Goalie,"11/01/2022, 14:09:56",2,0,0,0,0.9125,2.230286
-8475683,13,Sergei Bobrovsky,Florida Panthers,Goalie,"11/01/2022, 14:09:59",2,3,0,0,0.896552,3.06412
-8481519,13,Spencer Knight,Florida Panthers,Goalie,"11/01/2022, 14:10:01",3,0,0,0,0.898734,2.670871
-8470880,14,Brian Elliott,Tampa Bay Lightning,Goalie,"11/01/2022, 14:10:02",2,1,0,0,0.9,3.354454
-8476883,14,Andrei Vasilevskiy,Tampa Bay Lightning,Goalie,"11/01/2022, 14:10:04",3,3,0,0,0.910053,2.866108
-8475311,15,Darcy Kuemper,Washington Capitals,Goalie,"11/01/2022, 14:10:07",4,3,0,1,0.922449,2.388852
-8479292,15,Charlie Lindgren,Washington Capitals,Goalie,"11/01/2022, 14:10:09",1,1,0,0,0.925,3.089687
-8475852,16,Petr Mrazek,Chicago Blackhawks,Goalie,"11/01/2022, 14:10:10",1,1,0,0,0.873418,3.759006
-8471774,16,Alex Stalock,Chicago Blackhawks,Goalie,"11/01/2022, 14:10:10",3,2,0,0,0.913514,2.951424
-8482821,16,Arvid Soderblom,Chicago Blackhawks,Goalie,"11/01/2022, 14:10:13",0,0,0,0,0.911111,3.97351
-8477968,17,Alex Nedeljkovic,Detroit Red Wings,Goalie,"11/01/2022, 14:10:15",1,2,0,0,0.870968,4.963121
-8478024,17,Ville Husso,Detroit Red Wings,Goalie,"11/01/2022, 14:10:16",3,1,0,1,0.925926,2.401868
-8477424,18,Juuse Saros,Nashville Predators,Goalie,"11/01/2022, 14:10:19",2,4,0,0,0.909524,2.753291
-8480947,18,Kevin Lankinen,Nashville Predators,Goalie,"11/01/2022, 14:10:21",1,1,0,0,0.918919,3.051278
-8471306,19,Thomas Greiss,St. Louis Blues,Goalie,"11/01/2022, 14:10:22",0,2,0,0,0.914894,3.276451
-8476412,19,Jordan Binnington,St. Louis Blues,Goalie,"11/01/2022, 14:10:23",3,3,0,1,0.882353,3.27554
-8474593,20,Jacob Markstrom,Calgary Flames,Goalie,"11/01/2022, 14:10:26",4,1,0,0,0.902778,2.599278
-8478435,20,Dan Vladar,Calgary Flames,Goalie,"11/01/2022, 14:10:28",1,1,0,0,0.895833,3.031324
-8480382,21,Alexandar Georgiev,Colorado Avalanche,Goalie,"11/01/2022, 14:10:31",4,1,0,0,0.918269,2.811596
-8480925,21,Pavel Francouz,Colorado Avalanche,Goalie,"11/01/2022, 14:10:31",0,3,0,0,0.897727,3.076923
-8475789,22,Jack Campbell,Edmonton Oilers,Goalie,"11/01/2022, 14:10:32",4,2,0,0,0.888268,3.889789
-8479973,22,Stuart Skinner,Edmonton Oilers,Goalie,"11/01/2022, 14:10:34",2,1,0,0,0.955224,1.587652
-8477484,23,Spencer Martin,Vancouver Canucks,Goalie,"11/01/2022, 14:10:37",1,0,0,0,0.926471,2.432104
-8477967,23,Thatcher Demko,Vancouver Canucks,Goalie,"11/01/2022, 14:10:38",1,5,0,0,0.874439,4.049982
-8476434,24,John Gibson,Anaheim Ducks,Goalie,"11/01/2022, 14:10:41",2,5,0,0,0.888476,4.226344
-8476932,24,Anthony Stolarz,Anaheim Ducks,Goalie,"11/01/2022, 14:10:41",0,1,0,0,0.892308,3.575482
-8475809,25,Scott Wedgewood,Dallas Stars,Goalie,"11/01/2022, 14:10:44",0,2,0,0,0.880435,4.288499
-8479979,25,Jake Oettinger,Dallas Stars,Goalie,"11/01/2022, 14:10:45",5,1,0,1,0.951613,1.401687
-8471734,26,Jonathan Quick,Los Angeles Kings,Goalie,"11/01/2022, 14:10:47",3,4,0,0,0.888412,3.439027
-8477361,26,Cal Petersen,Los Angeles Kings,Goalie,"11/01/2022, 14:10:47",3,1,0,0,0.865385,4.097561
-8473503,28,James Reimer,San Jose Sharks,Goalie,"11/01/2022, 14:10:51",2,5,0,1,0.914027,2.767438
-8478039,28,Kaapo Kahkonen,San Jose Sharks,Goalie,"11/01/2022, 14:10:52",1,3,0,0,0.875,3.325753
-8476914,29,Joonas Korpisalo,Columbus Blue Jackets,Goalie,"11/01/2022, 14:10:55",0,0,0,0,0.0,0.0
-8478007,29,Elvis Merzlikins,Columbus Blue Jackets,Goalie,"11/01/2022, 14:10:56",2,4,0,0,0.86385,4.750637
-8480193,29,Daniil Tarasov,Columbus Blue Jackets,Goalie,"11/01/2022, 14:10:57",1,3,0,0,0.89313,3.572694
-8470594,30,Marc-Andre Fleury,Minnesota Wild,Goalie,"11/01/2022, 14:10:58",4,1,0,0,0.88,3.691203
-8479406,30,Filip Gustavsson,Minnesota Wild,Goalie,"11/01/2022, 14:11:01",0,3,0,0,0.878049,3.928416
-8476945,52,Connor Hellebuyck,Winnipeg Jets,Goalie,"11/01/2022, 14:11:03",4,2,0,1,0.931174,2.40566
-8479496,52,David Rittich,Winnipeg Jets,Goalie,"11/01/2022, 14:11:04",1,1,0,0,0.884615,3.071236
-8478872,53,Karel Vejmelka,Arizona Coyotes,Goalie,"11/01/2022, 14:11:08",1,3,0,0,0.884211,4.408327
-8478971,53,Connor Ingram,Arizona Coyotes,Goalie,"11/01/2022, 14:11:08",1,2,0,0,0.891089,3.695064
-8476316,54,Laurent Brossoit,Vegas Golden Knights,Goalie,"11/01/2022, 14:11:09",0,0,0,0,0.0,0.0
-8478499,54,Adin Hill,Vegas Golden Knights,Goalie,"11/01/2022, 14:11:12",4,0,0,0,0.939655,1.71826
-8480313,54,Logan Thompson,Vegas Golden Knights,Goalie,"11/01/2022, 14:11:13",4,2,0,2,0.942529,1.688476
-8475831,55,Philipp Grubauer,Seattle Kraken,Goalie,"11/01/2022, 14:11:13",0,1,0,0,0.860465,3.770291
-8476904,55,Chris Driedger,Seattle Kraken,Goalie,"11/01/2022, 14:11:13",0,0,0,0,0.0,0.0
-8474889,55,Martin Jones,Seattle Kraken,Goalie,"11/01/2022, 14:11:14",4,3,0,0,0.87931,3.08584
-8478916,55,Joey Daccord,Seattle Kraken,Goalie,"11/01/2022, 14:11:16",0,0,0,0,0.0,0.0
+id,currentteamid,fullname,currentteam,primaryposition,wins,losses,ties,shutouts,savepercentage,goalagainstaverage,lastupdated
+8473541,1,Jonathan Bernier,New Jersey Devils,Goalie,0,0,0,0,0.0,0.0,"11/01/2022, 19:37:48"
+8477970,1,Vitek Vanecek,New Jersey Devils,Goalie,3,1,0,1,0.903226,2.076923,"11/01/2022, 19:37:50"
+8478406,1,Mackenzie Blackwood,New Jersey Devils,Goalie,3,2,0,0,0.871287,2.811655,"11/01/2022, 19:37:50"
+8473575,2,Semyon Varlamov,New York Islanders,Goalie,2,1,0,0,0.907216,3.025493,"11/01/2022, 19:37:53"
+8478009,2,Ilya Sorokin,New York Islanders,Goalie,3,3,0,1,0.933333,2.212243,"11/01/2022, 19:37:54"
+8470860,3,Jaroslav Halak,New York Rangers,Goalie,0,3,0,0,0.86747,3.692652,"11/01/2022, 19:37:56"
+8478048,3,Igor Shesterkin,New York Rangers,Goalie,5,0,0,0,0.913462,2.55289,"11/01/2022, 19:37:57"
+8478433,4,Felix Sandstrom,Philadelphia Flyers,Goalie,0,2,0,0,0.9,3.141361,"11/01/2022, 19:38:01"
+8479394,4,Carter Hart,Philadelphia Flyers,Goalie,5,0,0,0,0.938053,2.307059,"11/01/2022, 19:38:02"
+8477465,5,Tristan Jarry,Pittsburgh Penguins,Goalie,4,2,0,0,0.914692,3.02112,"11/01/2022, 19:38:06"
+8479193,5,Casey DeSmith,Pittsburgh Penguins,Goalie,0,2,0,0,0.913462,2.97275,"11/01/2022, 19:38:07"
+8476999,6,Linus Ullmark,Boston Bruins,Goalie,6,0,0,1,0.945274,1.698842,"11/01/2022, 19:38:10"
+8480280,6,Jeremy Swayman,Boston Bruins,Goalie,2,1,0,0,0.871795,3.757829,"11/01/2022, 19:38:11"
+8467950,7,Craig Anderson,Buffalo Sabres,Goalie,3,0,0,0,0.945652,1.662203,"11/01/2022, 19:38:12"
+8477480,7,Eric Comrie,Buffalo Sabres,Goalie,3,3,0,0,0.901961,3.343084,"11/01/2022, 19:38:12"
+8474596,8,Jake Allen,Montréal Canadiens,Goalie,3,3,0,0,0.909091,2.854078,"11/01/2022, 19:38:16"
+8478470,8,Sam Montembeault,Montréal Canadiens,Goalie,2,1,0,0,0.931373,2.319161,"11/01/2022, 19:38:17"
+8475660,9,Cam Talbot,Ottawa Senators,Goalie,0,0,0,0,0.0,0.0,"11/01/2022, 19:38:19"
+8476341,9,Anton Forsberg,Ottawa Senators,Goalie,3,4,0,0,0.913223,3.043601,"11/01/2022, 19:38:20"
+8476433,9,Magnus Hellberg,Ottawa Senators,Goalie,1,0,0,0,0.935484,2.0,"11/01/2022, 19:38:21"
+8476899,10,Matt Murray,Toronto Maple Leafs,Goalie,0,1,0,0,0.826087,4.047218,"11/01/2022, 19:38:24"
+8478492,10,Ilya Samsonov,Toronto Maple Leafs,Goalie,4,2,0,0,0.92,2.350308,"11/01/2022, 19:38:26"
+8478902,10,Erik Kallgren,Toronto Maple Leafs,Goalie,0,1,0,0,0.875,3.620406,"11/01/2022, 19:38:26"
+8475883,12,Frederik Andersen,Carolina Hurricanes,Goalie,4,2,0,0,0.896104,2.641959,"11/01/2022, 19:38:28"
+8477293,12,Antti Raanta,Carolina Hurricanes,Goalie,2,0,0,0,0.9125,2.230286,"11/01/2022, 19:38:29"
+8475683,13,Sergei Bobrovsky,Florida Panthers,Goalie,2,3,0,0,0.896552,3.06412,"11/01/2022, 19:38:31"
+8481519,13,Spencer Knight,Florida Panthers,Goalie,3,0,0,0,0.898734,2.670871,"11/01/2022, 19:38:33"
+8470880,14,Brian Elliott,Tampa Bay Lightning,Goalie,2,1,0,0,0.9,3.354454,"11/01/2022, 19:38:34"
+8476883,14,Andrei Vasilevskiy,Tampa Bay Lightning,Goalie,3,3,0,0,0.910053,2.866108,"11/01/2022, 19:38:35"
+8475311,15,Darcy Kuemper,Washington Capitals,Goalie,4,3,0,1,0.922449,2.388852,"11/01/2022, 19:38:38"
+8479292,15,Charlie Lindgren,Washington Capitals,Goalie,1,1,0,0,0.925,3.089687,"11/01/2022, 19:38:40"
+8475852,16,Petr Mrazek,Chicago Blackhawks,Goalie,1,1,0,0,0.873418,3.759006,"11/01/2022, 19:38:41"
+8471774,16,Alex Stalock,Chicago Blackhawks,Goalie,3,2,0,0,0.913514,2.951424,"11/01/2022, 19:38:41"
+8482821,16,Arvid Soderblom,Chicago Blackhawks,Goalie,0,0,0,0,0.911111,3.97351,"11/01/2022, 19:38:44"
+8477968,17,Alex Nedeljkovic,Detroit Red Wings,Goalie,1,2,0,0,0.870968,4.963121,"11/01/2022, 19:38:46"
+8478024,17,Ville Husso,Detroit Red Wings,Goalie,3,1,0,1,0.925926,2.401868,"11/01/2022, 19:38:46"
+8477424,18,Juuse Saros,Nashville Predators,Goalie,2,4,0,0,0.909524,2.753291,"11/01/2022, 19:38:49"
+8480947,18,Kevin Lankinen,Nashville Predators,Goalie,1,1,0,0,0.918919,3.051278,"11/01/2022, 19:38:50"
+8471306,19,Thomas Greiss,St. Louis Blues,Goalie,0,2,0,0,0.914894,3.276451,"11/01/2022, 19:38:51"
+8476412,19,Jordan Binnington,St. Louis Blues,Goalie,3,3,0,1,0.882353,3.27554,"11/01/2022, 19:38:52"
+8474593,20,Jacob Markstrom,Calgary Flames,Goalie,4,1,0,0,0.902778,2.599278,"11/01/2022, 19:38:54"
+8478435,20,Dan Vladar,Calgary Flames,Goalie,1,1,0,0,0.895833,3.031324,"11/01/2022, 19:38:56"
+8480382,21,Alexandar Georgiev,Colorado Avalanche,Goalie,4,1,0,0,0.918269,2.811596,"11/01/2022, 19:38:59"
+8480925,21,Pavel Francouz,Colorado Avalanche,Goalie,0,3,0,0,0.897727,3.076923,"11/01/2022, 19:38:59"
+8475789,22,Jack Campbell,Edmonton Oilers,Goalie,4,2,0,0,0.888268,3.889789,"11/01/2022, 19:39:00"
+8479973,22,Stuart Skinner,Edmonton Oilers,Goalie,2,1,0,0,0.955224,1.587652,"11/01/2022, 19:39:02"
+8477484,23,Spencer Martin,Vancouver Canucks,Goalie,1,0,0,0,0.926471,2.432104,"11/01/2022, 19:39:05"
+8477967,23,Thatcher Demko,Vancouver Canucks,Goalie,1,5,0,0,0.874439,4.049982,"11/01/2022, 19:39:05"
+8476434,24,John Gibson,Anaheim Ducks,Goalie,2,5,0,0,0.888476,4.226344,"11/01/2022, 19:39:08"
+8476932,24,Anthony Stolarz,Anaheim Ducks,Goalie,0,1,0,0,0.892308,3.575482,"11/01/2022, 19:39:08"
+8475809,25,Scott Wedgewood,Dallas Stars,Goalie,0,2,0,0,0.880435,4.288499,"11/01/2022, 19:39:10"
+8479979,25,Jake Oettinger,Dallas Stars,Goalie,5,1,0,1,0.951613,1.401687,"11/01/2022, 19:39:12"
+8483575,25,Matt Murray,Dallas Stars,Goalie,0,0,0,0,0.0,0.0,"11/01/2022, 19:39:13"
+8471734,26,Jonathan Quick,Los Angeles Kings,Goalie,3,4,0,0,0.888412,3.439027,"11/01/2022, 19:39:13"
+8477361,26,Cal Petersen,Los Angeles Kings,Goalie,3,1,0,0,0.865385,4.097561,"11/01/2022, 19:39:14"
+8473503,28,James Reimer,San Jose Sharks,Goalie,2,5,0,1,0.914027,2.767438,"11/01/2022, 19:39:16"
+8478039,28,Kaapo Kahkonen,San Jose Sharks,Goalie,1,3,0,0,0.875,3.325753,"11/01/2022, 19:39:18"
+8476914,29,Joonas Korpisalo,Columbus Blue Jackets,Goalie,0,0,0,0,0.0,0.0,"11/01/2022, 19:39:21"
+8478007,29,Elvis Merzlikins,Columbus Blue Jackets,Goalie,2,4,0,0,0.86385,4.750637,"11/01/2022, 19:39:21"
+8480193,29,Daniil Tarasov,Columbus Blue Jackets,Goalie,1,3,0,0,0.89313,3.572694,"11/01/2022, 19:39:22"
+8470594,30,Marc-Andre Fleury,Minnesota Wild,Goalie,4,1,0,0,0.88,3.691203,"11/01/2022, 19:39:24"
+8479406,30,Filip Gustavsson,Minnesota Wild,Goalie,0,3,0,0,0.878049,3.928416,"11/01/2022, 19:39:26"
+8476945,52,Connor Hellebuyck,Winnipeg Jets,Goalie,4,2,0,1,0.931174,2.40566,"11/01/2022, 19:39:28"
+8479496,52,David Rittich,Winnipeg Jets,Goalie,1,1,0,0,0.884615,3.071236,"11/01/2022, 19:39:29"
+8478872,53,Karel Vejmelka,Arizona Coyotes,Goalie,1,3,0,0,0.884211,4.408327,"11/01/2022, 19:39:32"
+8478971,53,Connor Ingram,Arizona Coyotes,Goalie,1,2,0,0,0.891089,3.695064,"11/01/2022, 19:39:32"
+8476316,54,Laurent Brossoit,Vegas Golden Knights,Goalie,0,0,0,0,0.0,0.0,"11/01/2022, 19:39:33"
+8478499,54,Adin Hill,Vegas Golden Knights,Goalie,4,0,0,0,0.939655,1.71826,"11/01/2022, 19:39:36"
+8480313,54,Logan Thompson,Vegas Golden Knights,Goalie,4,2,0,2,0.942529,1.688476,"11/01/2022, 19:39:36"
+8475831,55,Philipp Grubauer,Seattle Kraken,Goalie,0,1,0,0,0.860465,3.770291,"11/01/2022, 19:39:37"
+8476904,55,Chris Driedger,Seattle Kraken,Goalie,0,0,0,0,0.0,0.0,"11/01/2022, 19:39:37"
+8474889,55,Martin Jones,Seattle Kraken,Goalie,4,3,0,0,0.87931,3.08584,"11/01/2022, 19:39:38"
+8478916,55,Joey Daccord,Seattle Kraken,Goalie,0,0,0,0,0.0,0.0,"11/01/2022, 19:39:40"

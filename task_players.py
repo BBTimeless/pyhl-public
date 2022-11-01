@@ -44,7 +44,7 @@ def get_player_stats():
             record['fullname'] = player_data['people'][0]['fullName']
             record['currentteam'] = player_data['people'][0]['currentTeam']['name']
             record['primaryposition'] = player_data['people'][0]['primaryPosition']['name']
-            record['lastupdated'] = datetime.utcnow().strftime("%m/%d/%Y, %H:%M:%S")
+            
 
             # Stats Info
             # Check for stats
@@ -64,6 +64,7 @@ def get_player_stats():
                 record['shutouts'] = 0
                 record['savepercentage'] = 0
                 record['goalagainstaverage'] = 0
+            record['lastupdated'] = datetime.utcnow().strftime("%m/%d/%Y, %H:%M:%S")
             player_stats_goalies.append(record)
             
 
@@ -79,7 +80,6 @@ def get_player_stats():
             record['playername'] = player_data['people'][0]['fullName']
             record['currentteam'] = player_data['people'][0]['currentTeam']['name']
             record['position'] = player_data['people'][0]['primaryPosition']['name']
-            record['lastupdated'] = datetime.utcnow().strftime("%m/%d/%Y, %H:%M:%S")
 
             # Stats Info
             # Check for stats
@@ -87,15 +87,15 @@ def get_player_stats():
                 stats = player_data['people'][0]['stats'][0]['splits'][0]['stat']
                 record['goals'] = stats['goals']
                 record['assists'] = stats['assists']
-                record['pim'] = stats['pim']
+                # record['pim'] = stats['pim']
                 record['shots'] = stats['shots']
                 record['games'] = stats['games']
-                record['hits'] = stats['hits']
-                record['powerplaygoals'] = stats['powerPlayGoals']
-                record['powerplaypoints'] = stats['powerPlayPoints']
-                record['faceoffpct'] = stats['faceOffPct']
-                record['blocked'] = stats['blocked']
-                record['plusminus'] = stats['plusMinus']
+                # record['hits'] = stats['hits']
+                # record['powerplaygoals'] = stats['powerPlayGoals']
+                # record['powerplaypoints'] = stats['powerPlayPoints']
+                # record['faceoffpct'] = stats['faceOffPct']
+                # record['blocked'] = stats['blocked']
+                # record['plusminus'] = stats['plusMinus']
                 record['points'] = stats['points']
                 record['timeonicepergame'] = float(stats['timeOnIcePerGame'].replace(":", "." ))
 
@@ -103,17 +103,18 @@ def get_player_stats():
             except (IndexError, KeyError):
                 record['goals'] = 0
                 record['assists'] = 0
-                record['pim'] = 0
+                # record['pim'] = 0
                 record['shots'] = 0
                 record['games'] = 0
-                record['hits'] = 0
-                record['powerplaygoals'] = 0
-                record['powerplaypoints'] = 0
-                record['faceoffpct'] = 0
-                record['blocked'] = 0
-                record['plusminus'] = 0
+                # record['hits'] = 0
+                # record['powerplaygoals'] = 0
+                # record['powerplaypoints'] = 0
+                # record['faceoffpct'] = 0
+                # record['blocked'] = 0
+                # record['plusminus'] = 0
                 record['points'] = 0
                 record['timeonicepergame'] = 0
+            record['lastupdated'] = datetime.utcnow().strftime("%m/%d/%Y, %H:%M:%S")
             player_stats_skaters.append(record)
     return(player_stats_skaters, player_stats_goalies)
 

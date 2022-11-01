@@ -15,3 +15,7 @@ Fetches skater data from the CSV file via a list of team ids. The data is then r
 def get_skater_data_by_team_id(team_ids):
     skaters = DATA.loc[DATA['currentteamid'].isin(team_ids)]
     return(skaters)
+
+def get_top_skaters(number, feature):
+    skaters = DATA.sort_values(by=[feature])
+    return(skaters)
