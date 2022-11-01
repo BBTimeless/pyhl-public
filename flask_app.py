@@ -1,7 +1,8 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 from flask_caching import Cache
 import pandas as pd
 from skaters import get_skater_data_by_id, get_skater_data_by_team_id
+from teams import get_team_data_all
 
 app = Flask(__name__)
 cache = Cache()
@@ -16,15 +17,22 @@ Renders the index template.
 '''
 @app.route('/')
 def index():
-    return render_template("index.html")
+    TEAMS_DATA = get_team_data_all()
+    return render_template("index.html",
+                            teams = TEAMS_DATA)
 
 @app.route('/skater/', methods=('GET', 'POST'))
 def skater():
-    if request.method == 'GET':
-        DATA = get_skater_data_by_team_id([15])
+    if request.method == 'POST':
+        form_data = request.form.getlist('team')
+        ids = [eval(i) for i in form_data]
+        print(ids)
+        SKATER_DATA = get_skater_data_by_team_id(ids)
         return render_template('skater_result.html',
-                                tables=[DATA.to_html(classes='data', header="true", table_id="skater_table")],
-                                titles=DATA.columns.values)
+                                tables=[SKATER_DATA.to_html(classes='data', header="true", table_id="skater_table")],
+                                titles=SKATER_DATA.columns.values)
+    else:
+        return redirect(url_for('index'))
 
 @cache.cached(timeout=260, key_prefix='function')
 def function():

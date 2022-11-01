@@ -11,7 +11,16 @@
 </head>
 <body>
 
-    
+    <form action="{{ url_for('skater') }}" method="post">
+        {% for index,team in teams.iterrows() %}
+            <input type="checkbox" id="{{team['id']}}" name="team" value="{{team['id']}}">
+            <label for="vehicle1"> {{team['name']}}</label><br>
+        
+            <!-- {{team['id']}} -->
+        {% endfor %}
+        <input type="submit" value="Go!">
+    </form>
+
 
 </body>
 </html>
