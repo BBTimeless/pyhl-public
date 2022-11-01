@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_caching import Cache
 import pandas as pd
 from skaters import get_skater_data_by_id, get_skater_data_by_team_id
@@ -16,10 +16,15 @@ Renders the index template.
 '''
 @app.route('/')
 def index():
-    DATA = get_skater_data_by_team_id([1,5,9])
-    return render_template("index.html",
-                            tables=[DATA.to_html(classes='data', header="true", table_id="skater_table")],
-                            titles=DATA.columns.values)
+    return render_template("index.html")
+
+@app.route('/skater/', methods=('GET', 'POST'))
+def skater():
+    if request.method == 'GET':
+        DATA = get_skater_data_by_team_id([15])
+        return render_template('skater_result.html',
+                                tables=[DATA.to_html(classes='data', header="true", table_id="skater_table")],
+                                titles=DATA.columns.values)
 
 @cache.cached(timeout=260, key_prefix='function')
 def function():
