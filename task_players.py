@@ -58,12 +58,12 @@ def get_player_stats():
                 record['goalagainstaverage'] = stats['goalAgainstAverage']
             # No Stats (Rookie or First NHL Game)
             except (IndexError, KeyError):
-                record['wins'] = None
-                record['losses'] = None
-                record['ties'] = None
-                record['shutouts'] = None
-                record['savepercentage'] = None
-                record['goalagainstaverage'] = None
+                record['wins'] = 0
+                record['losses'] = 0
+                record['ties'] = 0
+                record['shutouts'] = 0
+                record['savepercentage'] = 0
+                record['goalagainstaverage'] = 0
             player_stats_goalies.append(record)
             
 
@@ -101,19 +101,19 @@ def get_player_stats():
 
             # No Stats (Rookie or First NHL Game)
             except (IndexError, KeyError):
-                record['goals'] = None
-                record['assists'] = None
-                record['pim'] = None
-                record['shots'] = None
-                record['games'] = None
-                record['hits'] = None
-                record['powerplaygoals'] = None
-                record['powerplaypoints'] = None
-                record['faceoffpct'] = None
-                record['blocked'] = None
-                record['plusminus'] = None
-                record['points'] = None
-                record['timeonicepergame'] = None
+                record['goals'] = 0
+                record['assists'] = 0
+                record['pim'] = 0
+                record['shots'] = 0
+                record['games'] = 0
+                record['hits'] = 0
+                record['powerplaygoals'] = 0
+                record['powerplaypoints'] = 0
+                record['faceoffpct'] = 0
+                record['blocked'] = 0
+                record['plusminus'] = 0
+                record['points'] = 0
+                record['timeonicepergame'] = 0
             player_stats_skaters.append(record)
     return(player_stats_skaters, player_stats_goalies)
 

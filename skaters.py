@@ -15,7 +15,3 @@ Fetches skater data from the CSV file via a list of team ids. The data is then r
 def get_skater_data_by_team_id(team_ids):
     skaters = DATA.loc[DATA['currentteamid'].isin(team_ids)]
     return(skaters)
-
-
-get_skater_data_by_id([8476292, 8474090, 8476462])
-get_skater_data_by_team_id([5, 4, 1])
