@@ -13,7 +13,7 @@ def get_skater_data_by_id(player_ids):
 Fetches skater data from the CSV file via a list of team ids. The data is then returned in a list.
 '''
 def get_skater_data_by_team_id(team_ids):
-    skaters = DATA.loc[DATA['currentteamid'].isin(team_ids)]
+    skaters = DATA.loc[DATA['teamid'].isin(team_ids)]
     return(skaters)
 
 def get_top_skaters(number, feature):
