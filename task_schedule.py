@@ -15,7 +15,7 @@ def get_game_schedule():
         for game in games:
             game_data = {}
             game_data['id'] = game['gamePk']
-            game_data['gamedate'] = game['gameDate']
+            game_data['gamedate'] = format_date(game['gameDate'])
             game_data['homeid'] = game['teams']['home']['team']['id']
             game_data['awayid'] = game['teams']['away']['team']['id']
             games_data_all.append(game_data)
@@ -27,3 +27,9 @@ Writes the schedule data to a csv. This file will be used by the front end to de
 def write_game_schedule():
     df = pd.DataFrame(get_game_schedule())
     df.to_csv('static/data/data_schedule.csv', encoding='utf-8', index=False)
+
+def format_date(date_string):
+    # %Z    UTC
+    dt_string_formatted = date_string.replace('T', ' ')
+    dt_string_formatted = dt_string_formatted.replace('Z',' UTC')
+    return(dt_string_formatted)

@@ -15,3 +15,6 @@ Fetches team data from the CSV file via a list of team ids. The data is then ret
 def get_team_data_all():
     teams = DATA
     return(teams)
+
+# def get_teams_that_play_today():
+#     print(DATA)

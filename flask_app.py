@@ -27,7 +27,7 @@ def skater():
         form_data = request.form.getlist('team')
         ids = [eval(i) for i in form_data]
         SKATER_DATA = get_skater_data_by_team_id(ids)
-        return render_template('results.html',
+        return render_template('skater.html',
                                 skater_tables=[SKATER_DATA.to_html(classes='data', header="true", table_id="skater_table")],
                                 skater_titles=[SKATER_DATA.columns.values]
         )
