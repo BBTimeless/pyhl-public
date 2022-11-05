@@ -31,6 +31,8 @@ def write_game_schedule():
 
 '''
 Helper function to format the date string into an easier to read format.
+
+Converts from UTC to EST to align with personal use case.
 '''
 def format_date(date_string):
     dt_string_formatted = date_string.replace('T', ' ')

@@ -17,17 +17,27 @@ Renders the index template.
 '''
 @app.route('/')
 def index():
+    return render_template("index.html")
+
+'''
+Renders the skater template with the selection form.
+'''
+@app.route('/skater/')
+def skater():
     TEAMS_DATA = get_team_data_all()
-    return render_template("index.html",
+    return render_template("skater.html",
                             teams = TEAMS_DATA)
 
-@app.route('/results/', methods=('GET', 'POST'))
-def skater():
+'''
+Renders the results from the skater form into a table.
+'''
+@app.route('/skater_results/', methods=('GET', 'POST'))
+def skater_results():
     if request.method == 'POST':
         form_data = request.form.getlist('team')
         ids = [eval(i) for i in form_data]
         SKATER_DATA = get_skater_data_by_team_id(ids)
-        return render_template('skater.html',
+        return render_template('skater_results.html',
                                 skater_tables=[SKATER_DATA.to_html(classes='data', header="true", table_id="skater_table")],
                                 skater_titles=[SKATER_DATA.columns.values]
         )
