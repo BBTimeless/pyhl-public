@@ -16,7 +16,8 @@ def get_game_schedule():
         for game in games:
             game_data = {}
             game_data['id'] = game['gamePk']
-            game_data['gamedate'] = format_date(game['gameDate'])
+            game_data['gamedate'] = format_date_time(game['gameDate'])[0]
+            game_data['gametime'] = format_date_time(game['gameDate'])[1]
             game_data['homeid'] = game['teams']['home']['team']['id']
             game_data['awayid'] = game['teams']['away']['team']['id']
             games_data_all.append(game_data)
@@ -30,17 +31,20 @@ def write_game_schedule():
     df.to_csv('static/data/data_schedule.csv', encoding='utf-8', index=False)
 
 '''
-Helper function to format the date string into an easier to read format.
+Returns the date and time in a list.
 
-Converts from UTC to EST to align with personal use case.
+UTC -> EST
 '''
-def format_date(date_string):
+def format_date_time(date_string):
+    results = []
     dt_string_formatted = date_string.replace('T', ' ')
     dt_string_formatted = dt_string_formatted.replace('Z', ' UTC')
 
     dt_obj = datetime.strptime(dt_string_formatted, '%Y-%m-%d %H:%M:%S %Z')
     est = dt_obj - timedelta(hours=4)
 
-    final_db_dt_entry = est.strftime('%Y-%m-%d %H:%M:%S')
+    # [date, time]
+    results.append(est.strftime('%Y-%m-%d'))
+    results.append(est.strftime('%H:%M:%S'))
 
-    return(final_db_dt_entry)
+    return(results)

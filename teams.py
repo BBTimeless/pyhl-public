@@ -1,4 +1,5 @@
-import pandas as pd 
+import pandas as pd
+from datetime import datetime
 
 DATA = pd.read_csv('static/data/data_teams.csv')
 
@@ -16,5 +17,3 @@ def get_team_data_all():
     teams = DATA
     return(teams)
 
-# def get_teams_that_play_today():
-#     print(DATA)
