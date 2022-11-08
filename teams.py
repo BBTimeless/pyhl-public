@@ -1,5 +1,4 @@
 import pandas as pd
-from datetime import datetime
 
 DATA = pd.read_csv('static/data/data_teams.csv')
 
