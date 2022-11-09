@@ -1,17 +1,16 @@
 :root {
-    --background: #01012b;
-    --p_text: #d1f7ff;
-    --dark_teal: #005678;
-    --teal: #05d9e8;
-    --red: #ff2A6D;
+    --background: #ffffff;
+    --p_text: #1d3557;
+    --link: #e63946;
+    --header: #e63946;
   }
 
 a {
-    color: var(--red) !important;
+    color: var(--link) !important;
 }
 
 body {
-    background-color: rgb(20, 20, 20);
+    background-color: var(--background);
 }
 
 p, label, input, select, option, .dataTables_info {
@@ -19,9 +18,9 @@ p, label, input, select, option, .dataTables_info {
 }
 
 td {
-    color: var(--teal);
+    color: var(--p_text);
 }
 
 th {
-    color: var(--p_text);
+    color: var(--header);
 }
