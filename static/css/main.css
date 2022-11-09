@@ -1,0 +1,22 @@
+:root {
+    --background: #1e90ff;
+    --p_text: #ffffff;
+    --blue: #87dbff;
+    --pink: #ff0066;
+  }
+
+body {
+    background-color: rgb(20, 20, 20);
+}
+
+p, label, input, select, option {
+    color: var(--p_text);
+}
+
+td {
+    color: var(--blue);
+}
+
+th {
+    color: var(--p_text);
+}
