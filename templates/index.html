@@ -10,32 +10,48 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <!-- {% for table in skater_tables %}
-    {{ table|safe }}
-    {% endfor %} -->
-    <table id="skater_table">
-        
+    <table id="table_id" class="display">
+        <thead>
             <tr>
             {% for header in headers %}
                 <th>{{header}}</th>
             {% endfor %}
             </tr>
+        </thead>
 
-        {% for _, skater in skaters.iterrows() %}
-            <tr>
-                <td>{{skater['id']}}</td>
-            </tr>
-        {% endfor %}
+        <tbody>
+            {% for _, skater in skaters.iterrows() %}
+                <tr>
+                    <td>{{skater['playername']}}</td>
+                    <td>{{skater['currentteam']}}</td>
+                    <td>{{skater['position']}}</td>
+                    <td>{{skater['goals']}}</td>
+                    <td>{{skater['GPG']}}</td>
+                    <td>{{skater['assists']}}</td>
+                    <td>{{skater['APG']}}</td>
+                    <td>{{skater['shots']}}</td>
+                    <td>{{skater['SPG']}}</td>
+                    <td>{{skater['games']}}</td>
+                    <td>{{skater['points']}}</td>
+                    <td>{{skater['PPG']}}</td>
+                    <td>{{skater['timeonicepergame']}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+     
     </table>
-    
-    
 
 
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
     <script>
-    $(document).ready( function () {
-        $('#skater_table').DataTable();
-    } );
+        $(document).ready( function () {
+            $('#skaters').DataTable();
+        } );
     </script>
+        <script>
+            $(document).ready( function () {
+                $('#table_id').DataTable();
+            } );
+        </script>
 </body>
 </html>
