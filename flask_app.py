@@ -3,6 +3,7 @@ from flask_caching import Cache
 import pandas as pd
 from skaters import get_skater_data_by_id, get_skater_data_by_team_id, get_top_skaters
 from teams import get_team_data_all
+from schedule import get_teams_playing_today
 
 app = Flask(__name__)
 cache = Cache()
@@ -17,7 +18,13 @@ Renders the index template.
 '''
 @app.route('/')
 def index():
-    return render_template("index.html")
+    SKATER_DATA = get_skater_data_by_team_id(get_teams_playing_today())
+    return render_template('index.html',
+                            skaters = SKATER_DATA,
+                            headers = SKATER_DATA.columns
+                            # skater_tables=[SKATER_DATA.to_html(classes='data', header="true", table_id="skater_table")],
+                            # skater_titles=[SKATER_DATA.columns.values]
+                            )
 
 '''
 Renders the skater template with the selection form.
