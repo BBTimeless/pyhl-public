@@ -86,12 +86,12 @@ def get_player_stats():
             try:
                 stats = player_data['people'][0]['stats'][0]['splits'][0]['stat']
                 record['goals'] = stats['goals']
-                record['GPG'] = stats['goals']/stats['games']
+                record['GPG'] = round(stats['goals']/stats['games'], 2)
                 record['assists'] = stats['assists']
-                record['APG'] = stats['assists']/stats['games']
+                record['APG'] = round(stats['assists']/stats['games'], 2)
                 # record['pim'] = stats['pim']
                 record['shots'] = stats['shots']
-                record['SPG'] = stats['shots']/stats['games']
+                record['SPG'] = round(stats['shots']/stats['games'], 2)
                 record['games'] = stats['games']
                 # record['hits'] = stats['hits']
                 # record['powerplaygoals'] = stats['powerPlayGoals']
@@ -100,7 +100,7 @@ def get_player_stats():
                 # record['blocked'] = stats['blocked']
                 # record['plusminus'] = stats['plusMinus']
                 record['points'] = stats['points']
-                record['PPG'] = stats['points']/stats['games']
+                record['PPG'] = round(stats['points']/stats['games'], 2)
                 record['timeonicepergame'] = float(stats['timeOnIcePerGame'].replace(":", "." ))
 
             # No Stats (Rookie or First NHL Game)
