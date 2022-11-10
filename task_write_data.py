@@ -9,5 +9,5 @@ if __name__ == "__main__":
     # print('Schedule write in progress...')
     # write_game_schedule()
 
-    # print('Team write in progress...')
-    # write_team_data()
+    print('Team write in progress...')
+    write_team_data()
