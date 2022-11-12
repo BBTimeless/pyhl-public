@@ -12,12 +12,12 @@ body {
     background-color: var(--background);
 }
 
-p, label, input, select, option, .dataTables_info {
-    color: var(--blue) !important;
+p, label, input, select, option, td {
+    color: var(--blue);
 }
 
-td {
-    color: var(--blue);
+h1, h3 {
+    color: var(--blue) !important;
 }
 
 th {
@@ -26,12 +26,16 @@ th {
 
 .above_avg {
     background-color: var(--blue);
-    color: var(--white);
+    color: var(--white) !important;
 }
 
 .below_avg {
     background-color: var(--red);
-    color: var(--white);
+    color: var(--white) !important;
+}
+
+.dataTables_info{
+    color: var(--blue) !important;
 }
 
 .hidden {

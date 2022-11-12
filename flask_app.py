@@ -29,10 +29,8 @@ def index():
 @app.route('/skater/', methods=('GET', 'POST'))
 def skater():
     if request.method == 'POST':
-        print('post')
         skater_id = request.form['skater_id']
         skater_data = get_skater_data_by_id(skater_id)
-        print(skater_data)
         return render_template('skater.html',
                                 skater = skater_data)
     else:

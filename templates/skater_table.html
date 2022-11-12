@@ -24,19 +24,19 @@
 
                 {% if skater['position'] == "Defenseman" %}
                     <td class="non_stat_cell">
-                        <img src="{{ url_for('static', filename='img/shield.gif') }}"
+                        <img src="{{ url_for('static', filename='img/shield.gif') }}">
                     </td>
                 {% elif skater['position'] == "Right Wing" %}
                 <td class="non_stat_cell">
-                    <img src="{{ url_for('static', filename='img/wing-r.gif') }}"
+                    <img src="{{ url_for('static', filename='img/wing-r.gif') }}">
                 </td>
                 {% elif skater['position'] == "Left Wing" %}
                 <td class="non_stat_cell">
-                    <img src="{{ url_for('static', filename='img/wing-l.gif') }}"
+                    <img src="{{ url_for('static', filename='img/wing-l.gif') }}">
                 </td>                   
                 {% else %}
                 <td class="non_stat_cell">
-                    <img src="{{ url_for('static', filename='img/sticks.gif') }}"
+                    <img src="{{ url_for('static', filename='img/sticks.gif') }}">
                 </td>
                 {% endif %}
 

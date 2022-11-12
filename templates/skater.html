@@ -2,8 +2,26 @@
 
 {% block content %}
     {% for _, skater in skater.iterrows() %}
-        {{skater['id']}}
+        <h1>{{skater['playername']}}</h1>
+
+        {% if skater['position'] == "Defenseman" %}
+            <img src="{{ url_for('static', filename='img/shield-lrg.gif') }}">
+        {% elif skater['position'] == "Right Wing" %}
+            <img src="{{ url_for('static', filename='img/wing-r-lrg.gif') }}">
+        {% elif skater['position'] == "Left Wing" %}
+            <img src="{{ url_for('static', filename='img/wing-l-lrg.gif') }}">                
+        {% else %}
+            <img src="{{ url_for('static', filename='img/sticks-lrg.gif') }}">
+        {% endif %}
+
+        <h3>Goals Per Game</h3>
+        <p>{{skater['GPG']}} ({{skater['GPGDIF']}})</p>
+        <h3>Assists Per Game</h3>
+        <p>{{skater['APG']}} ({{skater['APGDIF']}})</p>
+        <h3>Shots Per Game</h3>
+        <p>{{skater['SPG']}} ({{skater['SPGDIF']}})</p>
+        <h3>Points Per Game</h3>
+        <p>{{skater['PPG']}} ({{skater['PPGDIF']}})</p>
         <br />
-        {{skater['playername']}}
     {% endfor %}
 {% endblock %}
