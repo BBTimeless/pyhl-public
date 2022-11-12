@@ -30,10 +30,14 @@
                         <td>
                             <img src="{{ url_for('static', filename='img/shield.gif') }}"
                         </td>
-                    {% elif skater['position'] == "Right Wing" or skater['position'] == "Left Wing" %}
+                    {% elif skater['position'] == "Right Wing" %}
                     <td>
-                        <img src="{{ url_for('static', filename='img/wing.gif') }}"
+                        <img src="{{ url_for('static', filename='img/wing-r.gif') }}"
                     </td>
+                    {% elif skater['position'] == "Left Wing" %}
+                    <td>
+                        <img src="{{ url_for('static', filename='img/wing-l.gif') }}"
+                    </td>                   
                     {% else %}
                     <td>
                         <img src="{{ url_for('static', filename='img/sticks.gif') }}"
