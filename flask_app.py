@@ -29,10 +29,10 @@ def index():
 '''
 Renders the skater template with the selection form.
 '''
-@app.route('/skater/')
+@app.route('/skater_form/')
 def skater():
     TEAMS_DATA = get_team_data_all()
-    return render_template("skater.html",
+    return render_template("skater_form.html",
                             teams = TEAMS_DATA)
 
 '''
@@ -46,7 +46,7 @@ def skater_results():
         SKATER_DATA = get_skater_data_by_team_id(ids)
         features = ['playername', 'currentteam', 'position', 'GPG', 'GPGDIF', 'APG', 'APGDIF', 'SPG', 'SPGDIF', 'PPG', 'PPGDIF', 'timeonicepergame']
         view_data = SKATER_DATA[features]
-        return render_template('skater_results.html',
+        return render_template('skater_results_table.html',
                             skaters = view_data,
                             headers = view_data.columns.drop(['GPGDIF', 'APGDIF', 'SPGDIF', 'PPGDIF']))
                                 
