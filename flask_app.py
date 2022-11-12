@@ -19,9 +19,10 @@ Renders the index template.
 @app.route('/')
 def index():
     SKATER_DATA = get_skater_data_by_team_id(get_teams_playing_today())
+    print(type(SKATER_DATA.columns))
     return render_template('index.html',
                             skaters = SKATER_DATA,
-                            headers = SKATER_DATA.columns
+                            headers = SKATER_DATA.columns.drop(['GPGDIF', 'SPGDIF', 'APGDIF', 'PPGDIF', 'points', 'shots', 'assists', 'games', 'goals'])
                             # skater_tables=[SKATER_DATA.to_html(classes='data', header="true", table_id="skater_table")],
                             # skater_titles=[SKATER_DATA.columns.values]
                             )

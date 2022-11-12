@@ -1,12 +1,11 @@
 :root {
-    --background: #ffffff;
-    --p_text: #1d3557;
-    --link: #e63946;
-    --header: #e63946;
+    --white: #ffffff;
+    --blue: #1d3557;
+    --red: #96121d;
   }
 
 a {
-    color: var(--link) !important;
+    color: var(--red) !important;
 }
 
 body {
@@ -14,13 +13,23 @@ body {
 }
 
 p, label, input, select, option, .dataTables_info {
-    color: var(--p_text) !important;
+    color: var(--blue) !important;
 }
 
 td {
-    color: var(--p_text);
+    color: var(--blue);
 }
 
 th {
-    color: var(--header);
+    color: var(--red);
+}
+
+.above_avg {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.below_avg {
+    background-color: var(--red);
+    color: var(--white);
 }

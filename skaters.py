@@ -87,7 +87,13 @@ def add_skater_averages_to_csv():
                 data_add_df.at[index,'SPGDIF'] = round((row['SPG'] - defense_spg_avg), 2)
                 data_add_df.at[index,'PPGDIF'] = round((row['PPG'] - defense_ppg_avg), 2)
 
-            if row['position'] == ('Left Wing' or 'Right Wing'):
+            if row['position'] == ('Left Wing'):
+                data_add_df.at[index,'GPGDIF'] = round((row['GPG'] - wing_gpg_avg), 2)
+                data_add_df.at[index,'APGDIF'] = round((row['APG'] - wing_apg_avg), 2)
+                data_add_df.at[index,'SPGDIF'] = round((row['SPG'] - wing_spg_avg), 2)
+                data_add_df.at[index,'PPGDIF'] = round((row['PPG'] - wing_ppg_avg), 2)
+            
+            if row['position'] == ('Right Wing'):
                 data_add_df.at[index,'GPGDIF'] = round((row['GPG'] - wing_gpg_avg), 2)
                 data_add_df.at[index,'APGDIF'] = round((row['APG'] - wing_apg_avg), 2)
                 data_add_df.at[index,'SPGDIF'] = round((row['SPG'] - wing_spg_avg), 2)

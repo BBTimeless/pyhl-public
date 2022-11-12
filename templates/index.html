@@ -25,21 +25,61 @@
                 <tr>
                     <td>{{skater['playername']}}</td>
                     <td>{{skater['currentteam']}}</td>
-                    <td>{{skater['position']}}</td>
-                    <td>{{skater['goals']}}</td>
-                    <td>{{skater['GPG']}}</td>
-                    <td>{{skater['assists']}}</td>
-                    <td>{{skater['APG']}}</td>
-                    <td>{{skater['shots']}}</td>
-                    <td>{{skater['SPG']}}</td>
-                    <td>{{skater['games']}}</td>
-                    <td>{{skater['points']}}</td>
-                    <td>{{skater['PPG']}}</td>
+
+                    {% if skater['position'] == "Defenseman" %}
+                        <td>
+                            <img src="{{ url_for('static', filename='img/shield.gif') }}"
+                        </td>
+                    {% elif skater['position'] == "Right Wing" or skater['position'] == "Left Wing" %}
+                    <td>
+                        <img src="{{ url_for('static', filename='img/wing.gif') }}"
+                    </td>
+                    {% else %}
+                    <td>
+                        <img src="{{ url_for('static', filename='img/sticks.gif') }}"
+                    </td>
+                    {% endif %}
+
+                    <!-- <td>{{skater['position']}} <br/>
+                        <img src="{{ url_for('static', filename='img/shield.gif') }}"
+                    </td> -->
+                    <!-- <td>{{skater['goals']}}</td> -->
+
+                    {% if skater['GPGDIF'] > 0.0  %}
+                        <td class="above_avg">{{skater['GPG']}} ({{skater['GPGDIF']}})</td>
+                    {% elif skater['GPGDIF'] < 0.0 %}
+                        <td class="below_avg">{{skater['GPG']}} ({{skater['GPGDIF']}})</td>
+                    {% else %}
+                        <td class="avg">{{skater['GPG']}} ({{skater['GPGDIF']}})</td>
+                    {% endif %}
+
+                    {% if skater['APGDIF'] > 0.0  %}
+                        <td class="above_avg">{{skater['APG']}} ({{skater['APGDIF']}})</td>
+                    {% elif skater['APGDIF'] < 0.0 %}
+                        <td class="below_avg">{{skater['APG']}} ({{skater['APGDIF']}})</td>
+                    {% else %}
+                        <td class="avg">{{skater['APG']}} ({{skater['APGDIF']}})</td>
+                    {% endif %}
+  
+                    {% if skater['SPGDIF'] > 0.0  %}
+                        <td class="above_avg">{{skater['SPG']}} ({{skater['SPGDIF']}})</td>
+                    {% elif skater['SPGDIF'] < 0.0 %}
+                        <td class="below_avg">{{skater['SPG']}} ({{skater['SPGDIF']}})</td>
+                    {% else %}
+                        <td class="avg">{{skater['SPG']}} ({{skater['SPGDIF']}})</td>
+                    {% endif %}
+
+                    <!-- <td>{{skater['games']}}</td> -->
+
+                    {% if skater['PPGDIF'] > 0.0  %}
+                        <td class="above_avg">{{skater['PPG']}} ({{skater['PPGDIF']}})</td>
+                    {% elif skater['PPGDIF'] < 0.0 %}
+                        <td class="below_avg">{{skater['PPG']}} ({{skater['PPGDIF']}})</td>
+                    {% else %}
+                        <td class="avg">{{skater['PPG']}} ({{skater['PPGDIF']}})</td>
+                    {% endif %}
+
                     <td>{{skater['timeonicepergame']}}</td>
-                    <td>{{skater['GPGDIF']}}</td>
-                    <td>{{skater['APGDIF']}}</td>
-                    <td>{{skater['SPGDIF']}}</td>
-                    <td>{{skater['PPGDIF']}}</td>
                 </tr>
             {% endfor %}
         </tbody>
