@@ -2,6 +2,7 @@ import pandas as pd
 
 VIEW_FEATURE_EXCLUDES = ['id', 'teamid']
 DATA = pd.read_csv('static/data/data_skater.csv')
+MIN_GAMES = 10
 
 
 '''
@@ -25,10 +26,15 @@ def get_top_skaters(number, feature):
     skaters = skaters.drop(columns=VIEW_FEATURE_EXCLUDES)
     return(skaters)
 
-def add_skater_averages():
+'''
+Calculates the nhl average for metrics: goals per game, assists per game, shots per game, and points per game.
+
+These values are then added to the skater data. The skater data CSV file is opened, modified, and closed with the new data.
+'''
+def add_skater_averages_to_csv():
     min_games = 10
 
-    # Goals per game average
+    # Goals per game average. We dont want players with less than the min games because they can skew the averages.
     wing_data_gpg = DATA.loc[(DATA['games'] >= min_games) & ((DATA['position'] == 'Left Wing') | (DATA['position'] == 'Right Wing'))]
     wing_gpg_avg = wing_data_gpg['GPG'].mean()
 
@@ -68,24 +74,30 @@ def add_skater_averages():
     defense_data_ppg = DATA.loc[(DATA['games'] >= min_games) & (DATA['position'] == 'Defenseman')]
     defense_ppg_avg = defense_data_ppg['PPG'].mean()
 
-    # ppg_avg = min_games_data['PPG'].mean()
-    
-    print('Wing gpg_avg', wing_gpg_avg)
-    print('center_gpg_avg', center_gpg_avg)
-    print('defense_gpg_avg', defense_gpg_avg)
+    # Create new columns for metric differences and calculate the new values for said columns.
+    data_add_df = DATA.assign(GPGDIF=0.0,APGDIF=0.0,SPGDIF=0.0, PPGDIF=0.0)
+    for index, row in data_add_df.iterrows():
+        if row['games'] < min_games:
+            print('Minimum games not reached:', row['playername'])
+            data_add_df = data_add_df.drop(index)
+        else:
+            if row['position'] == 'Defenseman':
+                data_add_df.at[index,'GPGDIF'] = round((row['GPG'] - defense_gpg_avg), 2)
+                data_add_df.at[index,'APGDIF'] = round((row['APG'] - defense_apg_avg), 2)
+                data_add_df.at[index,'SPGDIF'] = round((row['SPG'] - defense_spg_avg), 2)
+                data_add_df.at[index,'PPGDIF'] = round((row['PPG'] - defense_ppg_avg), 2)
 
-    print('wing_apg_avg', wing_apg_avg)
-    print('center_apg_avg', center_apg_avg)
-    print('defense_apg_avg', defense_apg_avg)
+            if row['position'] == ('Left Wing' or 'Right Wing'):
+                data_add_df.at[index,'GPGDIF'] = round((row['GPG'] - wing_gpg_avg), 2)
+                data_add_df.at[index,'APGDIF'] = round((row['APG'] - wing_apg_avg), 2)
+                data_add_df.at[index,'SPGDIF'] = round((row['SPG'] - wing_spg_avg), 2)
+                data_add_df.at[index,'PPGDIF'] = round((row['PPG'] - wing_ppg_avg), 2)
+            
+            if row['position'] == 'Center':
+                data_add_df.at[index,'GPGDIF'] = round((row['GPG'] - center_gpg_avg), 2)
+                data_add_df.at[index,'APGDIF'] = round((row['APG'] - center_apg_avg), 2)
+                data_add_df.at[index,'SPGDIF'] = round((row['SPG'] - center_spg_avg), 2)
+                data_add_df.at[index,'PPGDIF'] = round((row['PPG'] - center_ppg_avg), 2)
 
-    print('wing_spg_avg', wing_spg_avg)
-    print('center_spg_avg', center_spg_avg)
-    print('defense_spg_avg', defense_spg_avg)
-    
-    print('wing_ppg_avg', wing_ppg_avg)
-    print('center_ppg_avg', center_ppg_avg)
-    print('defense_ppg_avg', defense_ppg_avg)
-
-
-
-add_skater_averages()
+    # Write the new DF to the CSV file.
+    data_add_df.to_csv('static/data/data_skater.csv', encoding='utf-8', index=False)
