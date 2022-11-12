@@ -12,6 +12,10 @@ body {
     background-color: var(--background);
 }
 
+input[type=submit]:hover{
+    cursor:pointer;
+}
+
 p, label, input, select, option, td {
     color: var(--blue);
 }
@@ -36,6 +40,13 @@ th {
 
 .dataTables_info{
     color: var(--blue) !important;
+}
+
+.form_link {
+    background: transparent;
+    border: 0;
+    color: var(--red);
+    text-decoration:underline;
 }
 
 .hidden {
