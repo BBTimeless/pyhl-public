@@ -19,13 +19,12 @@ Renders the index template.
 @app.route('/')
 def index():
     SKATER_DATA = get_skater_data_by_team_id(get_teams_playing_today())
-    print(type(SKATER_DATA.columns))
+    features = ['playername', 'currentteam', 'position', 'GPG', 'GPGDIF', 'APG', 'APGDIF', 'SPG', 'SPGDIF', 'PPG', 'PPGDIF', 'timeonicepergame']
+    view_data = SKATER_DATA[features]
     return render_template('index.html',
-                            skaters = SKATER_DATA,
-                            headers = SKATER_DATA.columns.drop(['GPGDIF', 'SPGDIF', 'APGDIF', 'PPGDIF', 'points', 'shots', 'assists', 'games', 'goals'])
-                            # skater_tables=[SKATER_DATA.to_html(classes='data', header="true", table_id="skater_table")],
-                            # skater_titles=[SKATER_DATA.columns.values]
-                            )
+                            skaters = view_data,
+                            headers = view_data.columns.drop(['GPGDIF', 'APGDIF', 'SPGDIF', 'PPGDIF'])) #We dont need these column headers
+                            
 
 '''
 Renders the skater template with the selection form.
@@ -45,10 +44,11 @@ def skater_results():
         form_data = request.form.getlist('team')
         ids = [eval(i) for i in form_data]
         SKATER_DATA = get_skater_data_by_team_id(ids)
+        features = ['playername', 'currentteam', 'position', 'GPG', 'GPGDIF', 'APG', 'APGDIF', 'SPG', 'SPGDIF', 'PPG', 'PPGDIF', 'timeonicepergame']
+        view_data = SKATER_DATA[features]
         return render_template('skater_results.html',
-                                skater_tables=[SKATER_DATA.to_html(classes='data', header="true", table_id="skater_table")],
-                                skater_titles=[SKATER_DATA.columns.values]
-        )
+                            skaters = view_data,
+                            headers = view_data.columns.drop(['GPGDIF', 'APGDIF', 'SPGDIF', 'PPGDIF']))
                                 
     else:
         return redirect(url_for('index'))
