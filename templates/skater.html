@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for _, skater in skater.iterrows() %}
+        {{skater['id']}}
+        <br />
+        {{skater['playername']}}
+    {% endfor %}
+{% endblock %}

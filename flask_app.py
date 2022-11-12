@@ -19,18 +19,30 @@ Renders the index template.
 @app.route('/')
 def index():
     SKATER_DATA = get_skater_data_by_team_id(get_teams_playing_today())
-    features = ['playername', 'currentteam', 'position', 'GPG', 'GPGDIF', 'APG', 'APGDIF', 'SPG', 'SPGDIF', 'PPG', 'PPGDIF', 'timeonicepergame']
+    features = ['playername', 'currentteam', 'position', 'GPG', 'GPGDIF', 'APG', 'APGDIF', 'SPG', 'SPGDIF', 'PPG', 'PPGDIF', 'timeonicepergame', 'id']
     view_data = SKATER_DATA[features]
     return render_template('index.html',
                             skaters = view_data,
-                            headers = view_data.columns.drop(['GPGDIF', 'APGDIF', 'SPGDIF', 'PPGDIF'])) #We dont need these column headers
+                            headers = view_data.columns.drop(['GPGDIF', 'APGDIF', 'SPGDIF', 'PPGDIF', 'id'])) #We dont need these column headers
                             
 
+@app.route('/skater/', methods=('GET', 'POST'))
+def skater():
+    if request.method == 'POST':
+        print('post')
+        skater_id = request.form['skater_id']
+        skater_data = get_skater_data_by_id(skater_id)
+        print(skater_data)
+        return render_template('skater.html',
+                                skater = skater_data)
+    else:
+        return redirect(url_for('index'))
+
 '''
-Renders the skater template with the selection form.
+Renders a template with the skater team selection form.
 '''
 @app.route('/skater_form/')
-def skater():
+def skater_form():
     TEAMS_DATA = get_team_data_all()
     return render_template("skater_form.html",
                             teams = TEAMS_DATA)

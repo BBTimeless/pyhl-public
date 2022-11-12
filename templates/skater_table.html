@@ -10,7 +10,16 @@
     <tbody>
         {% for _, skater in skaters.iterrows() %}
             <tr>
-                <td class="non_stat_cell">{{skater['playername']}}</td>
+                <td class="non_stat_cell">
+                    <form action="{{ url_for('skater') }}" method="post">
+                        <input class="hidden" type="checkbox" id="{{skater['id']}}" name="skater_id" value="{{skater['id']}}" checked>
+                        <input class="form_link" type="submit" value="{{skater['playername']}}">
+                    </form>
+                </td>
+
+
+
+
                 <td class="non_stat_cell">{{skater['currentteam']}}</td>
 
                 {% if skater['position'] == "Defenseman" %}

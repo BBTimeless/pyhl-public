@@ -33,3 +33,7 @@ th {
     background-color: var(--red);
     color: var(--white);
 }
+
+.hidden {
+    display: none;
+}
