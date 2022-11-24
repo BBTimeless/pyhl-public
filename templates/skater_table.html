@@ -14,6 +14,7 @@
                     <form target="_blank" action="{{ url_for('skater') }}" method="post">
                         <input class="hidden" type="checkbox" id="{{skater['id']}}" name="skater_id" value="{{skater['id']}}" checked>
                         <input class="form_link" type="submit" value="{{skater['playername']}}">
+                        {{skater['id']}}
                     </form>
                 </td>
 

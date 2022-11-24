@@ -54,11 +54,12 @@ def skater_results():
         form_data = request.form.getlist('team')
         ids = [eval(i) for i in form_data]
         SKATER_DATA = get_skater_data_by_team_id(ids)
-        features = ['playername', 'currentteam', 'position', 'GPG', 'GPGDIF', 'APG', 'APGDIF', 'SPG', 'SPGDIF', 'PPG', 'PPGDIF', 'timeonicepergame']
+        features = ['playername', 'currentteam', 'position', 'GPG', 'GPGDIF', 'APG', 'APGDIF', 'SPG', 'SPGDIF', 'PPG', 'PPGDIF', 'timeonicepergame', 'id']
         view_data = SKATER_DATA[features]
+        print(view_data)
         return render_template('skater_results_table.html',
                             skaters = view_data,
-                            headers = view_data.columns.drop(['GPGDIF', 'APGDIF', 'SPGDIF', 'PPGDIF']))
+                            headers = view_data.columns.drop(['GPGDIF', 'APGDIF', 'SPGDIF', 'PPGDIF', 'id']))
                                 
     else:
         return redirect(url_for('index'))
