@@ -46,6 +46,7 @@ th {
     border-color: var(--blue);
     border-style: solid;
     width: 100%;
+    text-align: center;
 }
 
 #skater_stats_container_all {
