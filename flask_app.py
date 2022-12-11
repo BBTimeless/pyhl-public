@@ -10,8 +10,6 @@ cache = Cache()
 
 app.config["DEBUG"] = True
 app.config["CACHE_TYPE"] = 'simple'
-app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
-
 cache.init_app(app)
 
 '''
