@@ -11,7 +11,7 @@
         {% for _, skater in skaters.iterrows() %}
             <tr>
                 <td class="non_stat_cell">
-                    <form target="_blank" action="{{ url_for('skater') }}" method="post">
+                    <form target="_blank" action="{{ url_for('skater_card') }}" method="post">
                         <input class="hidden" type="checkbox" id="{{skater['id']}}" name="skater_id" value="{{skater['id']}}" checked>
                         <input class="form_link" type="submit" value="{{skater['playername']}}">
                         {{skater['id']}}

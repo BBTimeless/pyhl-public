@@ -1,4 +1,4 @@
-import pandas as pd 
+import pandas as pd
 
 DATA = pd.read_csv('static/data/data_skater.csv')
 MIN_GAMES = 5
